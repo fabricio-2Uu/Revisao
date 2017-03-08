@@ -32,11 +32,10 @@ public class Menu {
 							String curso = JOptionPane.showInputDialog("Informe o curso: ");
 							int situacao = Integer.parseInt(
 									JOptionPane.showInputDialog("Informe a situação:"));
-							scanner.nextLine();
-							long matricula = Long.parseLong("Informe a matricula:");
-							scanner.nextLine();
-							long numero = Long.parseLong("Informe o número do CPF:");
-							scanner.nextLine();
+							long matricula = Long.parseLong(JOptionPane.showInputDialog(
+												"Informe a matricula:"));
+							long numero = Long.parseLong(JOptionPane.showInputDialog(
+												"Informe o número do CPF:"));
 							int digito = Integer.parseInt(
 									JOptionPane.showInputDialog("Informe o digito do CPF:"));
 							Cpf cpf = new Cpf(numero, digito);
