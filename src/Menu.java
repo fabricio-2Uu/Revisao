@@ -3,6 +3,7 @@ import javax.swing.JOptionPane;
 import br.edu.ifrs.poa.cpf.Cpf;
 import br.edu.ifrs.poa.pessoas.Aluno;
 import br.edu.ifrs.poa.pessoas.Pessoa;
+import java.util.Scanner;
 
 public class Menu {
 
@@ -18,6 +19,7 @@ public class Menu {
 		public static void main(String[] args) {
 			//como declarar o vetor que vai armazenar os objetos?
 			Pessoa vetor[] = new Pessoa[2];
+			Scanner scanner = new Scanner(System.in);
 			
 			//como monstrar o menu repetidamente?
 			while(true) {
@@ -30,8 +32,11 @@ public class Menu {
 							String curso = JOptionPane.showInputDialog("Informe o curso: ");
 							int situacao = Integer.parseInt(
 									JOptionPane.showInputDialog("Informe a situação:"));
+							scanner.nextLine();
 							long matricula = Long.parseLong("Informe a matricula:");
+							scanner.nextLine();
 							long numero = Long.parseLong("Informe o número do CPF:");
+							scanner.nextLine();
 							int digito = Integer.parseInt(
 									JOptionPane.showInputDialog("Informe o digito do CPF:"));
 							Cpf cpf = new Cpf(numero, digito);
